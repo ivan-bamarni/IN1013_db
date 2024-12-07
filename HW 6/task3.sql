@@ -2,14 +2,14 @@
 
 SELECT staff.first_name,staff.surname
 FROM restStaff staff
-INNER JOIN restBill bill ON staff.staff_no = bill.waiter_no
+JOIN restBill bill ON staff.staff_no = bill.waiter_no
 WHERE bill.cust_name = 'Tanya Singh';
 
 --2
 
 SELECT room.room_date
 FROM restRoom_management room
-INNER JOIN restStaff staff ON room.headwaiter = staff.headwaiter
+JOIN restStaff staff ON room.headwaiter = staff.staff_no
 WHERE staff.first_name = 'Charles' 
 AND room.room_name = 'Green'
 AND room.room_date BETWEEN 160201 AND 160229;
